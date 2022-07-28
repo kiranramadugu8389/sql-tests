@@ -1,0 +1,51 @@
+create table schools(sno serial unique not null, name varchar, establishmentyear int, primary key (name));
+insert into schools(name, establishmentyear) values('sarada vidya nikethan',1985);
+insert into schools(name, establishmentyear) values('pragathi vidya nikethan',1980);
+select * from schools;
+
+
+create table students(sno serial, name varchar, schools varchar, age int, height float, joined timestamp, primary key (sno), foreign key (schools) references schools(name));
+insert into students (name, schools, age, height, joined) values('kiran', 'sarada vidya nikethan', 40, 5.2,now());
+insert into students (name, schools, age, height, joined) values('kiran1', 'sarada vidya nikethan', 40, 5.2,now());
+insert into students (name, schools, age, height, joined) values('kiran2', 'sarada vidya nikethan', 40, 5.2,now());
+insert into students (name, schools, age, height, joined) values('kiran3', 'sarada vidya nikethan', 40, 5.2,now());
+insert into students (name, schools, age, height, joined) values('kiran4', 'sarada vidya nikethan', 40, 5.2,now());
+insert into students (name, schools, age, height, joined) values('kiran5', 'pragathi vidya nikethan', 40, 5.2,now());
+insert into students (name, schools, age, height, joined) values('kiran6', 'pragathi vidya nikethan', 40, 5.2,now());
+insert into students (name, schools, age, height, joined) values('kiran7', 'pragathi vidya nikethan', 40, 5.2,now());
+insert into students (name, schools, age, height, joined) values('kiran8', 'pragathi vidya nikethan', 40, 5.2,now());
+insert into students (name, schools, age, height, joined) values('kiran9', 'pragathi vidya nikethan', 40, 5.2,now());
+insert into students (name, schools, age, height, joined) values('kiran10', 'pragathi vidya nikethan', 40, 5.2,now());
+select * from students;
+select a.*,b.* from students a, schools b where a.schools=b.name; 
+
+
+*******
+
+create table customers(CustomerID serial , CustomerName varchar , ContactName Varchar , Address Varchar , City Varchar , PostalCode varchar , Country Varchar, primary key (CustomerID));
+Insert into Customers(CustomerID , CustomerName , ContactName , Address , City , PostalCOde , Country) values(1 , 'Kiran Ramadugu' , 'Kiran Kumar', '5-13-102', 'Kothagudem' , '507101', 'India');
+Insert into Customers(CustomerID , CustomerName , ContactName , Address , City , PostalCOde , Country) values(2 , 'Abhilash Ramadugu' , 'Abhilash', '5-13-103', ' Bhadradri Kothagudem' , '507102', 'England');
+Insert into Customers(CustomerID , CustomerName , ContactName , Address , City , PostalCOde , Country) values(3 , 'Prasanna Ramadugu' , 'prasanna', '5-13-104', 'Khammam' , '507104', 'Newzeland');
+Insert into Customers(CustomerID , CustomerName , ContactName , Address , City , PostalCOde , Country) values(4 , 'Harika Ramadugu' , 'Harika', '5-13-105', 'Huzurnagar' , '507105', 'Australia');
+Insert into Customers(CustomerID , CustomerName , ContactName , Address , City , PostalCOde , Country) values(5 , 'Jeshitha Ramadugu' , 'Jessy', '5-13-106', 'Hyderabad' , '507106', 'UK');
+select * from customers;
+
+*******
+create table passengers (sno serial , passengersid int , passengersname varchar , seatallocated varchar ,time timestamp);
+insert into passengers(passengersid , passengersname , seatallocated , time) values(100 , 'kiranramadugu' , 'S6-UB' , now());
+insert into passengers(passengersid , passengersname , seatallocated ) values(101, 'abhilashramadugu', 'S6-LB'); 
+insert into passengers(passengersid , passengersname, seatallocated, time) values(102 , 'jeshitharamadugu' , 'S6-SU', '2022-07-06');
+insert into passengers(sno , passengersid , passengersname , seatallocated , time) values(10 , 103 , 'Greeshmitharamadugu' , 'S6-UB' , now(
+
+
+
+*********
+1. git hub is an application which save code/files/folders.
+2. an user 
+
+**
+how to add git creditials to system
+
+git config --global user.name myusername
+git config --global user.email myemail
+gca-dmoq-ewb
